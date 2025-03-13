@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Voxel-SERL: Real-world reinforcement learning in the context of vacuum gripping">
+    <meta name="keywords" content="RL, SERL">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Voxel-SERL: Real-world reinforcement learning in the context of vacuum gripping</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="./static/css/bulma-carousel.min.css"> -->
+    <!-- <link rel="stylesheet" href="./static/css/bulma-slider.min.css"> -->
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <!-- <script src="./static/js/bulma-carousel.min.js"></script> -->
+    <!-- <script src="./static/js/bulma-slider.min.js"></script> -->
+    <!-- <script src="./static/js/index.js"></script> -->
+</head>
+<body>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">Voxel-SERL: Real-world reinforcement learning in the
+                        context of vacuum gripping</h1>
+                    <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://nisutte.github.io/">Nico Sutter</a>,</span>
+                        <span class="author-block">
+              <a href="https://vhartmann.com/">Valentin N. Hartmann</a>,</span>
+                        <span class="author-block">
+              <a href="https://crl.ethz.ch/people/coros/index.html">Stelian Coros</a>,
+            </span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">Computational Robotics Lab, Department of Computer Science, ETH Zurich</span>
+                    </div>
+
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- PDF Link. -->
+                            <span class="link-block">
+                <a target="_blank" href="https://arxiv.org/abs/2503.02405"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+                            <span class="link-block">
+                <a target="_blank" href="https://github.com/rail-berkeley/serl"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                  </span>
+                  <span>SERL</span>
+                  </a>
+              </span>
+                            <!-- Code Link. -->
+                            <span class="link-block">
+                <a target="_blank" href="https://github.com/nisutte/voxel-serl"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                  </span>
+                  <span>Voxel SERL</span>
+                  </a>
+              </span>
+
+                            <!-- Dataset Link. -->
+                            <!--                            <span class="link-block">-->
+                            <!--                <a href="https://huggingface.co/datasets/MiguelZamoraM/TAPAS"-->
+                            <!--                   class="external-link button is-normal is-rounded is-dark">-->
+                            <!--                  <span class="icon">-->
+                            <!--                      <i class="fas fa-database"></i>-->
+                            <!--                  </span>-->
+                            <!--                  <span>Data 🤗</span>-->
+                            <!--                  </a>-->
+                            <!--              </span>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+
+            <div style="width: 100%; justify-content: center; align-items: center; margin: auto; text-align: center;">
+                <video id="teaser" autoplay muted loop playsinline width="70%">
+                    <source src="./static/videos/demo%20with%20voxel.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <h2 class="subtitle has-text-centered">
+                Voxel-SERL is a reinforcement learning framework that leverages 3D spatial perception to enhance
+                real-world vacuum gripping robustness.
+            </h2>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        When manipulating objects in the real world, we
+                        need reactive feedback policies that take into account sensor
+                        information to inform decisions. This study aims to determine
+                        how different encoders can be used in a reinforcement learning
+                        (RL) framework to interpret the spatial environment in the local
+                        surroundings of a robot arm. Our investigation focuses on com-
+                        paring real-world vision with 3D scene inputs, exploring new
+                        architectures in the process.
+                    </p>
+                    <p>
+                        We built on the SERL framework,
+                        providing us with a sample efficient and stable RL foundation
+                        we could build upon, while keeping training times minimal.
+                        The results of this study indicate that spatial information helps
+                        to significantly outperform the visual counterpart, tested on a
+                        box picking task with a vacuum gripper.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--/ Abstract. -->
+
+        <!-- Paper video. -->
+        <!-- <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Video</h2>
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div> -->
+        <!--/ Paper video. -->
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Dataset. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Approach & Findings</h2>
+                <h2 class="title is-4">Problem Setting</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        Reliable object manipulation with vacuum grippers is challenging due to variations in object
+                        size, shape, and surface texture. Traditional visual feedback struggles to generalize, making
+                        reinforcement learning with spatial representations a promising approach.
+                    </p>
+                </div>
+
+                <h2 class="title is-4">Setup</h2>
+                <div style="width: 100%; justify-content: center; align-items: center; margin: auto; text-align: center;">
+                    <img src="./static/images/front_pic.jpg"
+                         style="width:35%; height: 20%; object-fit: cover; object-position: bottom ;"/>
+                    <img src="./static/images/Voxel_grid_example_slim.png"
+                         style="width:35%; object-fit: cover; object-position: bottom ;"/>
+                </div>
+                <div class="content has-text-justified">
+                    <p>
+                        We employ a UR5 robotic arm with a Robotiq EPick vacuum gripper, equipped with two Intel
+                        RealSense depth cameras. The system captures spatial information using voxel grids, depth
+                        images, and RGB inputs, which are processed by different encoder architectures.
+                    </p>
+                </div>
+
+                <h2 class="title is-4">Training</h2>
+                <div style="width: 100%; display: flex; justify-content: normal; align-items: center; margin: auto; text-align: left;">
+                    <img src="./static/images/10_box_setup.jpg"
+                         style="width:35%; object-fit: cover; object-position: left; margin-right: 20px;"/>
+                    <p style="width:65%; ">
+                        We build on the Sample-Efficient Robotic Reinforcement Learning (SERL) framework, comparing
+                        different perception strategies: visual encoders (ResNet), depth maps, and voxel grids (3D
+                        convolutions). Training is conducted in a real-world environment with diverse box shapes and
+                        conditions. Actor and Learner nodes run simultaneously, using <a
+                            href="https://github.com/youliangtan/agentlace" target="_blank">AgentLace</a>.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <!--/ Dataset. -->
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Dataset. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Experiments</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        We evaluated our approach on a real-world vacuum gripping task using a variety of objects,
+                        including both seen and unseen samples. Policies trained with voxel-based encodings were
+                        compared against traditional image-based reinforcement learning methods.
+                    </p>
+                </div>
+
+                <h2 class="title is-4">Results</h2>
+                <div style="width: 100%; justify-content: center; align-items: center; margin: auto; text-align: center;">
+                    <img src="./static/images/Results.png"
+                         style="width:95%; object-fit: cover; object-position: bottom ;"/>
+                </div>
+                <div class="content has-text-justified">
+                    <p>
+                        Voxel-based policies demonstrated superior performance, achieving higher success rates and
+                        faster execution times compared to image-based approaches. The use of pre-trained VoxNet models
+                        and observation space symmetries further enhanced policy robustness and generalization to unseen
+                        objects. Below are evaluation videos showcasing different gripping scenarios:
+                    </p>
+
+                    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                        <!-- Video 1 -->
+                        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                            <video autoplay muted loop playsinline width="360">
+                                <source src="./static/videos/BT%20unseen%200828%201729%20small.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="caption" style="margin-top: 8px; font-size: 14px; color: #666;">(1) Behavior
+                                Tree
+                            </div>
+                        </div>
+
+                        <!-- Video 2 -->
+                        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                            <video autoplay muted loop playsinline width="360">
+                                <source src="./static/videos/BC%20unseen%200828%201738%20small.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="caption" style="margin-top: 8px; font-size: 14px; color: #666;">(2) Behavioral
+                                Cloning
+                            </div>
+                        </div>
+
+                        <!-- Video 3  -->
+                        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                            <video autoplay muted loop playsinline width="360">
+                                <source src="./static/videos/ResNet18%20unseen%200828%201759.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="caption" style="margin-top: 8px; font-size: 14px; color: #666;">(4) Image based
+                                Policy
+                            </div>
+                        </div>
+
+                        <!-- Video 4  -->
+                        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                            <video autoplay muted loop playsinline width="360">
+                                <source src="./static/videos/Depth%20unseen%200828%201818.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="caption" style="margin-top: 8px; font-size: 14px; color: #666;">(5) Depth based
+                                Policy
+                            </div>
+                        </div>
+
+                        <!-- Video 5  -->
+                        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                            <video autoplay muted loop playsinline width="360">
+                                <source src="./static/videos/Voxel%20unseen%200828%201824.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="caption" style="margin-top: 8px; font-size: 14px; color: #666;">(6) VoxNet based
+                                Policy
+                            </div>
+                        </div>
+
+                        <!-- Video 6  -->
+                        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                            <video autoplay muted loop playsinline width="360">
+                                <source src="./static/videos/Voxel%20PQGT%20unseen%200830%201024.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="caption" style="margin-top: 8px; font-size: 14px; color: #666;">(9) Pretrained
+                                VoxNet based Policy
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--/ Dataset. -->
+        </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{sutter2025comparison,
+  title={A comparison of visual representations for real-world reinforcement learning in the context of vacuum gripping},
+  author={Sutter, Nico and Hartmann, Valentin N and Coros, Stelian},
+  journal={arXiv preprint arXiv:2503.02405},
+  year={2025}
+}</code></pre>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            The website (<a href="https://github.com/tapas-dataset/tapas-dataset.github.io">source code</a>) design was
+            adapted from <a href="https://nerfies.github.io" class="external-link"><span
+                class="dnerf">Nerfies</span></a>.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
