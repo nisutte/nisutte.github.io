@@ -315,6 +315,67 @@
         </div>
 </section>
 
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Box Handover (multi robot)</h2>
+
+                <div class="content has-text-justified" style="margin-bottom: 16px;">
+                    <p>
+                        I continued this work with a multi-robot setup where a box is handed over between two UR5 arms using suction grippers. Each arm is equipped with a wrist-mounted D405 camera that provides voxelized, localized point cloud observations to the RL pipeline. Episodes begin after a scripted box pickup handled during the environment reset. Both robots are jointly controlled by a single RL policy operating in a 14-dimensional action space. Safety mechanisms automatically detect and handle potential collisions if the arms move too close together or if excessive forces are detected during the handover.
+                    </p>
+                    <p>
+                        The policy was trained on a green box in the vertical handover configuration. The horizontal handover and the red box scenarios were never seen during training.
+                    </p>
+
+                    
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                    <!-- Video 1 -->
+                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <video autoplay muted loop playsinline width="75%">
+                            <source src="./static/videos/handover_normal.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="caption" style="margin-top: 8px; font-size: 14px; color: #666;">(1) Normal Handover</div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <video autoplay muted loop playsinline width="75%">
+                            <source src="./static/videos/handover_vertical.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="caption" style="margin-top: 8px; font-size: 14px; color: #666;">(2) Horizontal Handover</div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <video autoplay muted loop playsinline width="75%">
+                            <source src="./static/videos/handover_red_box.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="caption" style="margin-top: 8px; font-size: 14px; color: #666;">(3) Red Box Handover</div>
+                    </div>
+                </div>
+
+                <div class="content has-text-justified" style="margin-top: 16px;">
+                    <p>
+                        Due to time limitations, I have not yet conducted any experiments on the multi-robot handover setup.
+                    </p>
+                </div>
+
+                <div class="content has-text-justified" style="margin-top: 20px;">
+                    <p>
+                        <!-- Comments can be added here -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
