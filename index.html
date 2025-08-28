@@ -326,7 +326,7 @@
                         I continued this work with a multi-robot setup where a box is handed over between two UR5 arms using suction grippers. Each arm is equipped with a wrist-mounted D405 camera that provides voxelized, localized point cloud observations to the RL pipeline. Episodes begin after a scripted box pickup handled during the environment reset. Both robots are jointly controlled by a single RL policy operating in a 14-dimensional action space. Safety mechanisms automatically detect and handle potential collisions if the arms move too close together or if excessive forces are detected during the handover.
                     </p>
                     <p>
-                        The policy was trained on a green box in the vertical handover configuration. The horizontal handover and the red box scenarios were never seen during training.
+                        The policy was trained on the green box in the vertical handover configuration. The horizontal handover and the red box scenarios were never seen during training.
                     </p>
 
                     
